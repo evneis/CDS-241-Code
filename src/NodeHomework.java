@@ -1,8 +1,11 @@
 public class NodeHomework {
 
     public class Node<T>{
-        public Object idk;
-        public Node() {}
+        public T element;
+        public Node(T t, String name) {
+            this.element = t;
+            System.out.println(name);
+        }
 
     }
 
