@@ -1,6 +1,6 @@
 public class NodeHomework {
 
-    public class Node<T>{
+    public static class Node<T>{
         private T element;
         private Node next;
         public Node(T t) {
@@ -25,5 +25,16 @@ public class NodeHomework {
 
     public static void main(String[] args){
 
+        Node<Integer> testNode = new Node<>(5);
+
+        System.out.println(testNode.getElement());
+        testNode.setElement(10);
+        System.out.println(testNode.getElement());
+
+        Node<String> test2 = new Node<>("Hello");
+
+        test2.setNext(testNode);
+        System.out.println(test2.getNext());
+        System.out.println(test2.getElement());
     }
 }
