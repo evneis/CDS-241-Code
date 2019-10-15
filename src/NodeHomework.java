@@ -3,22 +3,22 @@ public class NodeHomework {
     public class Node<T>{
         private T element;
         private Node next;
-        public Node(T t, Node next) {
+        public Node(T t) {
             this.element = t;
-            next = null;
+            this.next = null;
 
         }
 
-        public T getElement(Node n){return element;}
+        public T getElement(){return this.element;}
 
-        public void setElement(Node n, T element){
-            n.element = element;
+        public void setElement(T element){
+            this.element = element;
         }
 
-        public Node getNext(Node n){return n.next;}
+        public Node getNext(){return this.next;}
 
-        public void setNext(Node n, Node next){
-            n.next = next;
+        public void setNext(Node next){
+            this.next = next;
         }
     }
 
