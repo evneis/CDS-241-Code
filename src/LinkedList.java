@@ -15,33 +15,37 @@ public class LinkedList<T> {
 
     //add an item to the FRONT of the linked list
     public void addFirst(T value){
-        Node<T> previous = new Node<>(head.getData(), head.next());
-        this.head = new Node<T>(value, previous);
-        this.length++;
+        head = new Node<T>(value, head);
+        length++;
     }
 
     //remove the first item from the linked list
     //we return T because this is consistent with built-in Java container classes
     public T removeFirst(){
-
+        T temp = head.getData();
+        head = head.next();
+        length--;
+        return temp;
     }
 
     //return true if value is in the list, false otherwise
     public boolean contains(T value){
-        if(head.getData() == value)
-            return true;
-        else{
-            for(int i = 0; i < length; i++) {
-                Node<T> nodeI = head.next();
-            }
+        if(length == 0)
+            return false;
+        Node<T> n = head;
+        while(n != null && !n.getData().equals(value)){
+            n = n.next();
         }
+
+        return n != null;
     }
 
     //loop through the list and print out all values, in order
     public void print(){
         Node<T> current = head;
-        while(head.next() != null){
+        while(current.next() != null){
             System.out.println(current.getData());
+            current = current.next();
         }
     }
 
