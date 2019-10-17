@@ -49,6 +49,14 @@ public class LinkedList<T> {
         }
     }
 
+    public T get(int i){
+        assert i < length;
+
+        for(int j = 0; j <= i; j++){
+
+        }
+    }
+
     
     public static void main(String args[]){
         LinkedList<Integer> list = new LinkedList<>();
