@@ -52,8 +52,10 @@ public class LinkedList<T> {
     public T get(int i){
         assert i < length;
 
-        for(int j = 0; j <= i; j++){
+        Node<T> current = head;
 
+        for(int j = 0; j <= i; j++){
+            current = current.next();
         }
     }
 
