@@ -49,15 +49,15 @@ public class LinkedList<T> {
         }
     }
 
-    public T get(int i){
-        assert i < length;
-
-        Node<T> current = head;
-
-        for(int j = 0; j <= i; j++){
-            current = current.next();
-        }
-    }
+//    public T get(int i){
+//        assert i < length;
+//
+//        Node<T> current = head;
+//
+//        for(int j = 0; j <= i; j++){
+//            current = current.next();
+//        }
+//    }
 
     
     public static void main(String args[]){
