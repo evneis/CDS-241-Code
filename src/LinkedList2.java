@@ -70,6 +70,13 @@ public class LinkedList2<T> {
     }
 
     public static void main(String args[]){
-
+        LinkedList2<Integer> LLint = new LinkedList2<>();
+        System.out.println(LLint.length);
+        LLint.addFirst(5);
+        LLint.add(1,10);
+        System.out.println(LLint.length);
+        LLint.print();
+        LLint.add(1, 100);
+        LLint.print();
     }
 }
