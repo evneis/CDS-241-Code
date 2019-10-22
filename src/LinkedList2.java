@@ -54,15 +54,22 @@ public class LinkedList2<T> {
     }
 
     //add an item at index i; assumes the list is non-empty
-    public void add(int i, T value){
-        if(i > length || i <= 0)
-            throw new ArrayIndexOutOfBoundsException("Out of Bounds");
-        Iterator<T> iter;
-        Node2<T> addNode = new Node2<>(value, null);
-
+    public void add(int i, T value) throws IndexOutOfBoundsException{
+        Node2<T> current = head;
+        if(i > length || i < 0)
+            throw new IndexOutOfBoundsException("Out of Bounds");
+        else if(length == 0)
+            head = new Node2<T>(value, null);
+        else{
+            for(int j = 0; j < i-1; j++){
+                current = current.next();
+            }
+            current.setNext(new Node2<T>(value, current.next()));
+        }
+        length++;
     }
 
     public static void main(String args[]){
-        //TODO - Test your new add method
+
     }
 }
