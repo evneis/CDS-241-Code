@@ -55,7 +55,7 @@ public class LinkedList2<T> {
     public void add(int i, T value){
         if(i > length || i <= 0)
             throw new ArrayIndexOutOfBoundsException("Out of Bounds");
-        Node2<T> addNode = new Node2<T>(value, null);
+        Node2<T> addNode = new Node2<>(value, null);
 
     }
 
