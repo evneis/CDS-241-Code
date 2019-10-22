@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class LinkedList2<T> {
     private Node2<T> head;
     private int length;
@@ -55,6 +57,7 @@ public class LinkedList2<T> {
     public void add(int i, T value){
         if(i > length || i <= 0)
             throw new ArrayIndexOutOfBoundsException("Out of Bounds");
+        Iterator<T> iter;
         Node2<T> addNode = new Node2<>(value, null);
 
     }
