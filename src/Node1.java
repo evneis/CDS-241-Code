@@ -1,12 +1,12 @@
-public class Node<T> {
+public class Node1<T> {
     private T data;
-    private Node<T> next;
+    private Node1<T> next;
 
-    public Node(T x){
+    public Node1(T x){
         this(x,null);
     }
 
-    public Node(T x, Node<T> n){
+    public Node1(T x, Node1<T> n){
         data = x;
         next = n;
     }
@@ -19,11 +19,11 @@ public class Node<T> {
         data = d;
     }
 
-    public Node<T> next(){
+    public Node1<T> next(){
         return next;
     }
 
-    public void setNext(Node<T> n){
+    public void setNext(Node1<T> n){
         next = n;
     }
 

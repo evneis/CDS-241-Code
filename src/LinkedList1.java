@@ -1,9 +1,9 @@
-public class LinkedList<T> {
-    private Node<T> head;
+public class LinkedList1<T> {
+    private Node1<T> head;
     private int length;
 
     //creates an empty list
-    public LinkedList(){
+    public LinkedList1(){
         head = null;
         length = 0;
     }
@@ -15,7 +15,7 @@ public class LinkedList<T> {
 
     //add an item to the FRONT of the linked list
     public void addFirst(T value){
-        head = new Node<T>(value, head);
+        head = new Node1<T>(value, head);
         length++;
     }
 
@@ -32,7 +32,7 @@ public class LinkedList<T> {
     public boolean contains(T value){
         if(length == 0)
             return false;
-        Node<T> n = head;
+        Node1<T> n = head;
         while(n != null && !n.getData().equals(value)){
             n = n.next();
         }
@@ -42,7 +42,7 @@ public class LinkedList<T> {
 
     //loop through the list and print out all values, in order
     public void print(){
-        Node<T> current = head;
+        Node1<T> current = head;
         while(current.next() != null){
             System.out.println(current.getData());
             current = current.next();
@@ -61,7 +61,7 @@ public class LinkedList<T> {
 
     
     public static void main(String args[]){
-        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList1<Integer> list = new LinkedList1<>();
         for(int i = 0; i < 10; ++i){
             list.addFirst(i);
         }
